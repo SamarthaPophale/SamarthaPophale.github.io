@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samarth Pophale — Data & IT Professional</title>
+<meta name="description" content="Samarth Pophale — IT/Data professional specializing in production support, data pipelines, and system reliability. Based in Dublin, Ireland.">
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --text-dim: #64748b;
+    --accent: #0d9488;
+    --accent-dark: #0f766e;
+    --tag-bg: #f1f5f9;
+    --max-width: 880px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  a { color: var(--accent-dark); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Nav */
+  header.nav {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .nav-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    list-style: none;
+    font-size: 14px;
+  }
+  .nav-links a { color: var(--text-dim); }
+  .nav-links a:hover { color: var(--accent-dark); text-decoration: none; }
+
+  /* Hero */
+  section.hero { padding: 64px 0 48px; }
+  .eyebrow {
+    color: var(--accent-dark);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(30px, 5vw, 44px);
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  .hero-title {
+    font-size: 19px;
+    color: var(--text-dim);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .hero-summary {
+    max-width: 640px;
+    color: var(--text-dim);
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+  }
+
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .btn-primary:hover { background: var(--accent-dark); text-decoration: none; }
+  .btn-secondary {
+    color: var(--text);
+    background: #fff;
+  }
+  .btn-secondary:hover { border-color: var(--accent); text-decoration: none; color: var(--accent-dark); }
+
+  /* Sections */
+  section { padding: 48px 0; border-top: 1px solid var(--border); }
+  section.hero { border-top: none; }
+
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .skill-group {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .skill-group h3 {
+    font-size: 13px;
+    color: var(--accent-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 12.5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+
+  /* Experience */
+  .exp-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+  .exp-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .exp-role { font-size: 17px; font-weight: 700; }
+  .exp-date { font-size: 13px; color: var(--text-dim); white-space: nowrap; }
+  .exp-org { color: var(--accent-dark); font-size: 14px; margin-bottom: 14px; font-weight: 600; }
+  .exp-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-left: 18px; }
+  .exp-list li {
+    position: relative;
+    color: var(--text-dim);
+    font-size: 14.5px;
+  }
+  .exp-list li::before {
+    content: "•";
+    position: absolute;
+    left: -18px;
+    color: var(--accent);
+  }
+  .exp-list strong { color: var(--text); }
+
+  /* Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .project-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .project-tag {
+    font-size: 12px;
+    color: var(--accent-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .project-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .project-desc { color: var(--text-dim); font-size: 14.5px; }
+
+  /* Education */
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .edu-item:last-child { border-bottom: none; }
+  .edu-degree { font-weight: 700; font-size: 15px; }
+  .edu-school { color: var(--text-dim); font-size: 14px; }
+  .edu-date { color: var(--text-dim); font-size: 13px; white-space: nowrap; }
+
+  /* Contact */
+  .contact-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+  }
+  .contact-card p { color: var(--text-dim); margin-bottom: 18px; font-size: 15px; }
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 28px 0 40px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-name">Samarth Pophale</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" id="about">
+    <div class="eyebrow">IT / Data Professional</div>
+    <h1>Samarth Pophale</h1>
+    <div class="hero-title">Production Support &amp; Data Pipeline Reliability</div>
+    <p class="hero-summary">
+      IT/Data professional experienced in monitoring production systems, resolving support incidents via ServiceNow,
+      and maintaining reliable service delivery across multiple applications and pipelines within Agile/Scrum
+      delivery cycles. Skilled in root cause analysis, issue escalation, IAM/access-control practices, and
+      cross-functional coordination between technical and business teams — with a track record of high system
+      uptime and improved operational efficiency.
+    </p>
+    <div class="hero-meta">
+      <span>📍 Dublin, Ireland</span>
+      <span>✉️ <a href="mailto:samarthpophale98@gmail.com">samarthpophale98@gmail.com</a></span>
+      <span>📞 +353 89 961 4222</span>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="mailto:samarthpophale98@gmail.com">Get in touch</a>
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/samarth-pophale/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Incident &amp; Issue Management</h3>
+        <div class="tag-list">
+          <span class="tag">ServiceNow</span>
+          <span class="tag">Monitoring &amp; Alerting</span>
+          <span class="tag">Root Cause Analysis</span>
+          <span class="tag">Defect Triage &amp; Escalation</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Change, Release &amp; Security</h3>
+        <div class="tag-list">
+          <span class="tag">Azure DevOps</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Agile/Scrum</span>
+          <span class="tag">IAM &amp; RBAC</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Infrastructure &amp; Testing</h3>
+        <div class="tag-list">
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Networking Fundamentals</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Languages &amp; Querying</h3>
+        <div class="tag-list">
+          <span class="tag">SQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">Bash / Shell</span>
+          <span class="tag">HiveQL</span>
+          <span class="tag">Spark SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Reporting &amp; BI</h3>
+        <div class="tag-list">
+          <span class="tag">Power BI</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">QlikView</span>
+          <span class="tag">Excel</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Data Pipelines &amp; Databases</h3>
+        <div class="tag-list">
+          <span class="tag">Apache Airflow</span>
+          <span class="tag">dbt</span>
+          <span class="tag">ETL/ELT</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MS SQL Server</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="exp-card">
+      <div class="exp-head">
+        <div class="exp-role">Data Analyst</div>
+        <div class="exp-date">Jul 2024 – Dec 2024</div>
+      </div>
+      <div class="exp-org">Trixter Solutions · Pune, India</div>
+      <ul class="exp-list">
+        <li>Logged, triaged and resolved production support incidents via <strong>ServiceNow</strong>, monitoring 20+ pipelines and application jobs, achieving <strong>99.5% observed uptime</strong></li>
+        <li>Performed root cause analysis on recurring system errors, escalating to technical teams and <strong>cutting failure rates by 35%</strong></li>
+        <li>Tested, debugged and validated pipelines and integrations using SQL, Postman and Docker-based environments across <strong>8+ systems</strong></li>
+        <li>Managed Change Controls and release processes using <strong>Azure DevOps, GitHub Actions and Jenkins</strong> for recurring application and reporting updates</li>
+        <li>Served as liaison between technical and business stakeholders, working within an Agile/Scrum team through sprint planning and daily standups</li>
+        <li>Implemented <strong>IAM and role-based access control (RBAC)</strong> practices across <strong>500K+ records</strong>, ensuring secure, compliant handling of production data</li>
+        <li>Automated <strong>12+ recurring monitoring and support workflows</strong> using Apache Airflow and dbt, <strong>reducing manual intervention by 60%</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <span class="project-tag">Manufacturing · Smart Cities · Energy</span>
+        <div class="project-title">IoT Sensor Data Analytics &amp; Anomaly Detection System</div>
+        <div class="project-desc">
+          Engineered a streaming pipeline processing <strong>1M+ events/hour</strong> with automated anomaly
+          detection models, improving early identification of system issues and outliers by <strong>25%</strong>.
+        </div>
+      </div>
+      <div class="project-card">
+        <span class="project-tag">Retail · E-Commerce</span>
+        <div class="project-title">Real-Time Sales Intelligence Platform</div>
+        <div class="project-desc">
+          Built and supported an end-to-end platform processing <strong>250K+ events/day</strong>, cutting latency
+          by <strong>70%</strong> and ensuring reliable performance for live reporting.
+        </div>
+      </div>
+      <div class="project-card">
+        <span class="project-tag">Finance · Capital Markets</span>
+        <div class="project-title">Post-Listing Performance Analysis of IPOs using Event Study &amp; OpenAI API-based Sentiment Model</div>
+        <div class="project-desc">
+          Applied <strong>event study methodology</strong> to measure abnormal stock returns around IPO listing
+          dates, and built a <strong>sentiment analysis model using the OpenAI API</strong> to score news and
+          market commentary, correlating sentiment signals with post-listing price performance.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="exp-card" style="padding: 6px 24px;">
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Master of Computing (Data Analytics) — Grade: 2:1</div>
+          <div class="edu-school">National College of Ireland, Dublin, Ireland</div>
+        </div>
+        <div class="edu-date">Jan 2025 – Jan 2026</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Bachelor of Engineering (Computer Science) — Grade: 1:1</div>
+          <div class="edu-school">Savitribai Phule Pune University, Pune, India</div>
+        </div>
+        <div class="edu-date">May 2021 – Jun 2024</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-card">
+      <p>Open to opportunities in data analytics, production support, and IT operations. Reach out any time.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:samarthpophale98@gmail.com">Email me</a>
+        <a class="btn btn-secondary" href="tel:+353899614222">+353 89 961 4222</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/samarth-pophale/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Samarth Pophale · Dublin, Ireland
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
